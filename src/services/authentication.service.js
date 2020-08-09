@@ -14,8 +14,8 @@ function login(username, password) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            "usernameOrEmail": "Rola",
-            "password": "123456"
+            "usernameOrEmail": username,
+            "password": password
         })
     };
 
@@ -45,8 +45,8 @@ function logout() {
         if (!response.ok) {
             if ([401, 403].indexOf(response.status) !== -1) {
                 // auto logout if 401 Unauthorized or 403 Forbidden response returned from api
-                authenticationService.logout();
-                location.reload(true);
+                // authenticationService.logout();
+                // location.reload(true);
             }
 
             const error = (data && data.message) || response.statusText;

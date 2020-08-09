@@ -27,8 +27,8 @@ class LoginPage extends React.Component {
                         password: ''
                     }}
                     validationSchema={Yup.object().shape({
-                        username: Yup.string().required('Username is required'),
-                        password: Yup.string().required('Password is required')
+                        username: Yup.string().required('Nombre de usuario requerido'),
+                        password: Yup.string().required('Contraseña requerida')
                     })}
                     onSubmit={({ username, password }, { setStatus, setSubmitting }) => {
                         setStatus();
