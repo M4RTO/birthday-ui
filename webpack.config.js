@@ -5,9 +5,11 @@ module.exports = {
    entry: './src/index.js',
    output: {
       path: path.resolve( __dirname, 'dist' ),
+      sourceMapFilename: '[name].js.map',
       filename: 'main.js',
       publicPath: '/',
    },
+   devtool: 'source-map',
    devServer: {
       historyApiFallback: true,
       port: 9000
